@@ -1,5 +1,10 @@
 # Lab 4 Mobile - Looma App Testing Suite
 
+## Authors
+
+Bassine DIALLO
+Mohamed SENGHOR
+
 ## Overview
 
 This is a comprehensive Robot Framework test suite for automated mobile testing of the Looma Android application using Appium. The project focuses on testing core functionalities including user authentication and product management features.
