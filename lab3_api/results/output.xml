@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.13.3 on win32)" generated="2025-07-18T13:47:59.248243" rpa="false" schemaversion="5">
+<suite id="s1" name="Ebay Api Tests" source="C:\EXAMEN_QA_TEST\lab3_api\testcases\ebay_api_tests.robot">
+<kw name="Create eBay Session" owner="ebay_keywords" type="SETUP">
+<kw name="Create Session" owner="RequestsLibrary">
+<msg time="2025-07-18T13:48:00.544114" level="INFO">Creating Session using : alias=ebay, url=https://api.sandbox.ebay.com/sell/fulfillment/v1, headers={'Authorization': 'Bearer v^1.1#i^1#f^0#r^0#p^1#I^3#t^H4sIAAAAAAAA/+VYW2wUVRjublu0wYKXhhpQso5AgmRmZ2Z39jKyq9sWQqFXttQCIc2ZmTN0YHZmmHO23QVDaoEqlwSDsfalBhIIqBV8ENHEYPQBFcQIKhrAFwKJYgSDF2zi7cy0lG0lgHQTmzgvk3POf/7zfd/5/3NjOyeUPNa9oPtqqecu785OttPr8XAT2ZIJxXMmFXqnFhewOQaenZ0zOou6Cr+di0BKt8TFEFmmgaAvk9INJLqVMSptG6IJkIZEA6QgErEsJhO1NSLPsKJlm9iUTZ3yVVfFKFmKBNSAEBb4aFQN8RypNa75bDJjlBqNSJAN8mGoSCElGiLtCKVhtYEwMHCM4lleoNkwzUWaOE4M8qLAM4LALqN8zdBGmmkQE4al4i5c0e1r52C9OVSAELQxcULFqxPzk/WJ6qp5dU1z/Tm+4kM6JDHAaTSyVGkq0NcM9DS8+TDItRaTaVmGCFH++OAII52KiWtg7gC+K7Uq80FZCEYBD1SiWn6knG/aKYBvjsOp0RRadU1FaGANZ2+lKFFDWgVlPFSqIy6qq3zOrzENdE3VoB2j5lUkliYaGqi4RKhqBlRoHUjA0uhkRQsdZiVJhRGZpQGMqGEI5KFhBn0NiTxqnErTUDRHMuSrM3EFJJjhaGUCOcoQo3qj3k6o2MGTaxe4pmAguMyZ0sE5TOM2w5lVmCIy+NzirfUf7o2xrUlpDIc9jG5wBYpRwLI0hRrd6EbiUPBkUIxqw9gS/f6Ojg6mI8CY9ko/z7Kcv6W2Jim3wRSgXFsn1x177dYdaM2lIkPSE2kizloES4ZEKgFgrKTiQYHjBG5I95Gw4qNr/1GRw9k/Mh/ylR88CLCKoMgKz0Z5CIR85Ed8KET9Dg4ogSydAvZqiC0dyJCWSZylU9DWFDEgqHwgokJaCUVVOhhVVVoSlBDNqRCyEEqSHI38f9LkdgM9CWUb4jxFep6ivFKAFaGgaS6sa2GT3LzmRKY9UtOgtSR4HaQbs7U19asy7W3NldlAY+x2c+GG5Ct1jSjTRMbPlwBOrudHhAUmwlAZE72kbFqwwdQ1OTu+JjhgKw3AxtmKdJaUk1DXyW9MVBOWVZ2v9TpPJP/VUnFnrPO5S/0nO9QNWSEnbMcXK6c/Ig7IPDLOHsTIZsrv5LoJyAHEqW51UY+Jt0ZOruOKNSE5yFZTBo+cjEuXQe0yY0Nkpm1y2mbqnTNYk7kaGmRPw7ap69BuHlsEONmcSqUxkHQ43tI6DwGugXG24XLk8hgJRKJhfky8ZHc7bR1vS1I+FuKieXd0rPaPvOLHC9yP6/IcZbs8R7weD1vF0twcdvaEwiVFhfdQSMOQQcBQJDPDaEBlkLbSIDdYGzKrYdYCmu19oOCLi88nl55Y9HbP4bVrnmGeOFJQkvPSsHMF++DwW0NJITcx5+GBfeh6SzE3ubyUF9gwF+G4IC/wy9hHr7cWcVOKykBPRlo/sOGj2S/N7P7Ze3F5/9lHjrOlw0YeT3FBUZenoP3h3ZOmXdp78o2yzIE+7dmATx5Yf/fmr4+dnzHVVxL5+My0qczLPeUnFvbO+nTxub6Nm8/v6L/v1d9nNp9siFivLwk3oHWXd5xlTy2sfHxg+qFL7/adrr3/zH7r/I8du7ZcWfPl3u6DlcLAC+hC4q9FP4RKX/vzp9l9/ae3cl1b9dNVmza09X4/fX9KnNJzKVmYCR7bV/t08INfQq2flZn87ilry7/6ddcnJ8Tj6z6cRe+Y81bNwOULG1KNB44WbvL8ceDePd+9k0kPtG4rq/M8xa0/+P6LXf1Xz77X693z3Mxv/KmTNQe3l6891dEbDB/ecg6/eWVjW/Xi7d7Pp6/at/zJNXjF5N8OZZbGtvW+MjinfwP0WSCEAxIAAA==', 'Content-Type': 'application/json', 'Accept': 'application/json'},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<arg>ebay</arg>
+<arg>${BASE_URL}</arg>
+<arg>headers=${HEADERS}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<status status="PASS" start="2025-07-18T13:48:00.543731" elapsed="0.001379"/>
+</kw>
+<status status="PASS" start="2025-07-18T13:48:00.543097" elapsed="0.002527"/>
+</kw>
+<test id="s1-t1" name="Test Get Order - Valid" line="7">
+<kw name="Get Order Should Succeed" owner="ebay_keywords">
+<kw name="GET On Session" owner="RequestsLibrary">
+<msg time="2025-07-18T13:48:01.354874" level="INFO">GET Request : url=https://api.sandbox.ebay.com/sell/fulfillment/v1/order/TEST-ORDER-2023-123456 
+ path_url=/sell/fulfillment/v1/order/TEST-ORDER-2023-123456 
+ headers={'User-Agent': 'python-requests/2.32.3', 'Accept-Encoding': 'gzip, deflate', 'Accept': 'application/json', 'Connection': 'keep-alive', 'Authorization': 'Bearer v^1.1#i^1#f^0#r^0#p^1#I^3#t^H4sIAAAAAAAA/+VYW2wUVRjublu0wYKXhhpQso5AgmRmZ2Z39jKyq9sWQqFXttQCIc2ZmTN0YHZmmHO23QVDaoEqlwSDsfalBhIIqBV8ENHEYPQBFcQIKhrAFwKJYgSDF2zi7cy0lG0lgHQTmzgvk3POf/7zfd/5/3NjOyeUPNa9oPtqqecu785OttPr8XAT2ZIJxXMmFXqnFhewOQaenZ0zOou6Cr+di0BKt8TFEFmmgaAvk9INJLqVMSptG6IJkIZEA6QgErEsJhO1NSLPsKJlm9iUTZ3yVVfFKFmKBNSAEBb4aFQN8RypNa75bDJjlBqNSJAN8mGoSCElGiLtCKVhtYEwMHCM4lleoNkwzUWaOE4M8qLAM4LALqN8zdBGmmkQE4al4i5c0e1r52C9OVSAELQxcULFqxPzk/WJ6qp5dU1z/Tm+4kM6JDHAaTSyVGkq0NcM9DS8+TDItRaTaVmGCFH++OAII52KiWtg7gC+K7Uq80FZCEYBD1SiWn6knG/aKYBvjsOp0RRadU1FaGANZ2+lKFFDWgVlPFSqIy6qq3zOrzENdE3VoB2j5lUkliYaGqi4RKhqBlRoHUjA0uhkRQsdZiVJhRGZpQGMqGEI5KFhBn0NiTxqnErTUDRHMuSrM3EFJJjhaGUCOcoQo3qj3k6o2MGTaxe4pmAguMyZ0sE5TOM2w5lVmCIy+NzirfUf7o2xrUlpDIc9jG5wBYpRwLI0hRrd6EbiUPBkUIxqw9gS/f6Ojg6mI8CY9ko/z7Kcv6W2Jim3wRSgXFsn1x177dYdaM2lIkPSE2kizloES4ZEKgFgrKTiQYHjBG5I95Gw4qNr/1GRw9k/Mh/ylR88CLCKoMgKz0Z5CIR85Ed8KET9Dg4ogSydAvZqiC0dyJCWSZylU9DWFDEgqHwgokJaCUVVOhhVVVoSlBDNqRCyEEqSHI38f9LkdgM9CWUb4jxFep6ivFKAFaGgaS6sa2GT3LzmRKY9UtOgtSR4HaQbs7U19asy7W3NldlAY+x2c+GG5Ct1jSjTRMbPlwBOrudHhAUmwlAZE72kbFqwwdQ1OTu+JjhgKw3AxtmKdJaUk1DXyW9MVBOWVZ2v9TpPJP/VUnFnrPO5S/0nO9QNWSEnbMcXK6c/Ig7IPDLOHsTIZsrv5LoJyAHEqW51UY+Jt0ZOruOKNSE5yFZTBo+cjEuXQe0yY0Nkpm1y2mbqnTNYk7kaGmRPw7ap69BuHlsEONmcSqUxkHQ43tI6DwGugXG24XLk8hgJRKJhfky8ZHc7bR1vS1I+FuKieXd0rPaPvOLHC9yP6/IcZbs8R7weD1vF0twcdvaEwiVFhfdQSMOQQcBQJDPDaEBlkLbSIDdYGzKrYdYCmu19oOCLi88nl55Y9HbP4bVrnmGeOFJQkvPSsHMF++DwW0NJITcx5+GBfeh6SzE3ubyUF9gwF+G4IC/wy9hHr7cWcVOKykBPRlo/sOGj2S/N7P7Ze3F5/9lHjrOlw0YeT3FBUZenoP3h3ZOmXdp78o2yzIE+7dmATx5Yf/fmr4+dnzHVVxL5+My0qczLPeUnFvbO+nTxub6Nm8/v6L/v1d9nNp9siFivLwk3oHWXd5xlTy2sfHxg+qFL7/adrr3/zH7r/I8du7ZcWfPl3u6DlcLAC+hC4q9FP4RKX/vzp9l9/ae3cl1b9dNVmza09X4/fX9KnNJzKVmYCR7bV/t08INfQq2flZn87ilry7/6ddcnJ8Tj6z6cRe+Y81bNwOULG1KNB44WbvL8ceDePd+9k0kPtG4rq/M8xa0/+P6LXf1Xz77X693z3Mxv/KmTNQe3l6891dEbDB/ecg6/eWVjW/Xi7d7Pp6/at/zJNXjF5N8OZZbGtvW+MjinfwP0WSCEAxIAAA==', 'Content-Type': 'application/json'} 
+ body=None 
+ </msg>
+<msg time="2025-07-18T13:48:01.355167" level="INFO">GET Response : url=https://api.sandbox.ebay.com/sell/fulfillment/v1/order/TEST-ORDER-2023-123456 
+ status=401, reason=Unauthorized 
+ headers={'rlogid': 't6pithqauq%60fiiw%28ufmadh%7B%3F%3Ctowiugvpd%60jhs.vgiggi%7F.01d73ece%3Ce*d7v2g-1981dcabde7-0x2360', 'x-ebay-client-tls-version': 'TLSv1.3', 'x-content-type-options': 'nosniff', 'x-xss-protection': '0', 'cache-control': 'no-cache, no-store, max-age=0, must-revalidate', 'pragma': 'no-cache', 'expires': '0', 'x-frame-options': 'DENY', 'content-type': 'application/json', 'content-length': '254', 'date': 'Fri, 18 Jul 2025 13:48:02 GMT', 'x-envoy-upstream-service-time': '13', 'server': 'ebay-proxy-server', 'strict-transport-security': 'max-age=31536000', 'x-ebay-pop-id': 'UFES2-LVSAZ01-apisandbox'} 
+ body={
+  "errors": [
+    {
+      "errorId": 1001,
+      "domain": "OAuth",
+      "category": "REQUEST",
+      "message": "Invalid access token",
+      "longMessage": "Invalid access token. Check the value of the Authorization HTTP request header."
+    }
+  ]
+} 
+ </msg>
+<msg time="2025-07-18T13:48:01.355343" level="INFO">C:\Users\Utilisateur\AppData\Local\Programs\Python\Python313\Lib\site-packages\urllib3\connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host 'api.sandbox.ebay.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(</msg>
+<msg time="2025-07-18T13:48:01.356363" level="FAIL">HTTPError: 401 Client Error: Unauthorized for url: https://api.sandbox.ebay.com/sell/fulfillment/v1/order/TEST-ORDER-2023-123456</msg>
+<var>${response}</var>
+<arg>ebay</arg>
+<arg>url=/order/${order_id}</arg>
+<doc>Sends a GET request on a previously created HTTP Session.</doc>
+<status status="FAIL" start="2025-07-18T13:48:00.546821" elapsed="0.816298">HTTPError: 401 Client Error: Unauthorized for url: https://api.sandbox.ebay.com/sell/fulfillment/v1/order/TEST-ORDER-2023-123456</status>
+</kw>
+<kw name="Should Be Equal As Integers" owner="BuiltIn">
+<arg>${response.status_code}</arg>
+<arg>200</arg>
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<status status="NOT RUN" start="2025-07-18T13:48:01.363344" elapsed="0.000037"/>
+</kw>
+<kw>
+<var>${order}=</var>
+<var>${response.json()}</var>
+<status status="NOT RUN" start="2025-07-18T13:48:01.363563" elapsed="0.000029"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<arg>Order details: ${order}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2025-07-18T13:48:01.363719" elapsed="0.000027"/>
+</kw>
+<kw name="Should Be True" owner="BuiltIn">
+<arg>${order.orderId} == ${order_id}</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="NOT RUN" start="2025-07-18T13:48:01.364013" elapsed="0.000031"/>
+</kw>
+<arg>${VALID_ORDER_ID}</arg>
+<status status="FAIL" start="2025-07-18T13:48:00.546415" elapsed="0.817806">HTTPError: 401 Client Error: Unauthorized for url: https://api.sandbox.ebay.com/sell/fulfillment/v1/order/TEST-ORDER-2023-123456</status>
+</kw>
+<status status="FAIL" start="2025-07-18T13:48:00.545728" elapsed="0.819020">HTTPError: 401 Client Error: Unauthorized for url: https://api.sandbox.ebay.com/sell/fulfillment/v1/order/TEST-ORDER-2023-123456</status>
+</test>
+<test id="s1-t2" name="Test Get Order - Invalid ID" line="10">
+<kw name="Get Order Should Fail" owner="ebay_keywords">
+<kw name="GET On Session" owner="RequestsLibrary">
+<msg time="2025-07-18T13:48:01.595496" level="INFO">GET Request : url=https://api.sandbox.ebay.com/sell/fulfillment/v1/order/1234567890INVALID 
+ path_url=/sell/fulfillment/v1/order/1234567890INVALID 
+ headers={'User-Agent': 'python-requests/2.32.3', 'Accept-Encoding': 'gzip, deflate', 'Accept': 'application/json', 'Connection': 'keep-alive', 'Authorization': 'Bearer v^1.1#i^1#f^0#r^0#p^1#I^3#t^H4sIAAAAAAAA/+VYW2wUVRjublu0wYKXhhpQso5AgmRmZ2Z39jKyq9sWQqFXttQCIc2ZmTN0YHZmmHO23QVDaoEqlwSDsfalBhIIqBV8ENHEYPQBFcQIKhrAFwKJYgSDF2zi7cy0lG0lgHQTmzgvk3POf/7zfd/5/3NjOyeUPNa9oPtqqecu785OttPr8XAT2ZIJxXMmFXqnFhewOQaenZ0zOou6Cr+di0BKt8TFEFmmgaAvk9INJLqVMSptG6IJkIZEA6QgErEsJhO1NSLPsKJlm9iUTZ3yVVfFKFmKBNSAEBb4aFQN8RypNa75bDJjlBqNSJAN8mGoSCElGiLtCKVhtYEwMHCM4lleoNkwzUWaOE4M8qLAM4LALqN8zdBGmmkQE4al4i5c0e1r52C9OVSAELQxcULFqxPzk/WJ6qp5dU1z/Tm+4kM6JDHAaTSyVGkq0NcM9DS8+TDItRaTaVmGCFH++OAII52KiWtg7gC+K7Uq80FZCEYBD1SiWn6knG/aKYBvjsOp0RRadU1FaGANZ2+lKFFDWgVlPFSqIy6qq3zOrzENdE3VoB2j5lUkliYaGqi4RKhqBlRoHUjA0uhkRQsdZiVJhRGZpQGMqGEI5KFhBn0NiTxqnErTUDRHMuSrM3EFJJjhaGUCOcoQo3qj3k6o2MGTaxe4pmAguMyZ0sE5TOM2w5lVmCIy+NzirfUf7o2xrUlpDIc9jG5wBYpRwLI0hRrd6EbiUPBkUIxqw9gS/f6Ojg6mI8CY9ko/z7Kcv6W2Jim3wRSgXFsn1x177dYdaM2lIkPSE2kizloES4ZEKgFgrKTiQYHjBG5I95Gw4qNr/1GRw9k/Mh/ylR88CLCKoMgKz0Z5CIR85Ed8KET9Dg4ogSydAvZqiC0dyJCWSZylU9DWFDEgqHwgokJaCUVVOhhVVVoSlBDNqRCyEEqSHI38f9LkdgM9CWUb4jxFep6ivFKAFaGgaS6sa2GT3LzmRKY9UtOgtSR4HaQbs7U19asy7W3NldlAY+x2c+GG5Ct1jSjTRMbPlwBOrudHhAUmwlAZE72kbFqwwdQ1OTu+JjhgKw3AxtmKdJaUk1DXyW9MVBOWVZ2v9TpPJP/VUnFnrPO5S/0nO9QNWSEnbMcXK6c/Ig7IPDLOHsTIZsrv5LoJyAHEqW51UY+Jt0ZOruOKNSE5yFZTBo+cjEuXQe0yY0Nkpm1y2mbqnTNYk7kaGmRPw7ap69BuHlsEONmcSqUxkHQ43tI6DwGugXG24XLk8hgJRKJhfky8ZHc7bR1vS1I+FuKieXd0rPaPvOLHC9yP6/IcZbs8R7weD1vF0twcdvaEwiVFhfdQSMOQQcBQJDPDaEBlkLbSIDdYGzKrYdYCmu19oOCLi88nl55Y9HbP4bVrnmGeOFJQkvPSsHMF++DwW0NJITcx5+GBfeh6SzE3ubyUF9gwF+G4IC/wy9hHr7cWcVOKykBPRlo/sOGj2S/N7P7Ze3F5/9lHjrOlw0YeT3FBUZenoP3h3ZOmXdp78o2yzIE+7dmATx5Yf/fmr4+dnzHVVxL5+My0qczLPeUnFvbO+nTxub6Nm8/v6L/v1d9nNp9siFivLwk3oHWXd5xlTy2sfHxg+qFL7/adrr3/zH7r/I8du7ZcWfPl3u6DlcLAC+hC4q9FP4RKX/vzp9l9/ae3cl1b9dNVmza09X4/fX9KnNJzKVmYCR7bV/t08INfQq2flZn87ilry7/6ddcnJ8Tj6z6cRe+Y81bNwOULG1KNB44WbvL8ceDePd+9k0kPtG4rq/M8xa0/+P6LXf1Xz77X693z3Mxv/KmTNQe3l6891dEbDB/ecg6/eWVjW/Xi7d7Pp6/at/zJNXjF5N8OZZbGtvW+MjinfwP0WSCEAxIAAA==', 'Content-Type': 'application/json'} 
+ body=None 
+ </msg>
+<msg time="2025-07-18T13:48:01.595637" level="INFO">GET Response : url=https://api.sandbox.ebay.com/sell/fulfillment/v1/order/1234567890INVALID 
+ status=401, reason=Unauthorized 
+ headers={'rlogid': 't6pithqauq%60fiiw%28ufmadh%7B%3F%3Ctowiugvpd%60jhs.vgiggi%7F.01d73ece%3Ce*ri%7Ecw-1981dcabedc-0x2335', 'x-ebay-client-tls-version': 'TLSv1.3', 'x-content-type-options': 'nosniff', 'x-xss-protection': '0', 'cache-control': 'no-cache, no-store, max-age=0, must-revalidate', 'pragma': 'no-cache', 'expires': '0', 'x-frame-options': 'DENY', 'content-type': 'application/json', 'content-length': '254', 'date': 'Fri, 18 Jul 2025 13:48:03 GMT', 'x-envoy-upstream-service-time': '11', 'server': 'ebay-proxy-server', 'strict-transport-security': 'max-age=31536000', 'x-ebay-pop-id': 'UFES2-LVSAZ01-apisandbox'} 
+ body={
+  "errors": [
+    {
+      "errorId": 1001,
+      "domain": "OAuth",
+      "category": "REQUEST",
+      "message": "Invalid access token",
+      "longMessage": "Invalid access token. Check the value of the Authorization HTTP request header."
+    }
+  ]
+} 
+ </msg>
+<msg time="2025-07-18T13:48:01.595760" level="INFO">C:\Users\Utilisateur\AppData\Local\Programs\Python\Python313\Lib\site-packages\urllib3\connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host 'api.sandbox.ebay.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(</msg>
+<msg time="2025-07-18T13:48:01.596602" level="FAIL">HTTPError: 401 Client Error: Unauthorized for url: https://api.sandbox.ebay.com/sell/fulfillment/v1/order/1234567890INVALID</msg>
+<var>${response}</var>
+<arg>ebay</arg>
+<arg>url=/order/${invalid_order_id}</arg>
+<doc>Sends a GET request on a previously created HTTP Session.</doc>
+<status status="FAIL" start="2025-07-18T13:48:01.368672" elapsed="0.229224">HTTPError: 401 Client Error: Unauthorized for url: https://api.sandbox.ebay.com/sell/fulfillment/v1/order/1234567890INVALID</status>
+</kw>
+<kw name="Should Be Equal As Integers" owner="BuiltIn">
+<arg>${response.status_code}</arg>
+<arg>404</arg>
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<status status="NOT RUN" start="2025-07-18T13:48:01.598103" elapsed="0.000037"/>
+</kw>
+<kw>
+<var>${error}=</var>
+<var>${response.json()}</var>
+<status status="NOT RUN" start="2025-07-18T13:48:01.598300" elapsed="0.000029"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<arg>Error details: ${error}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2025-07-18T13:48:01.598460" elapsed="0.000027"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${error.errorId}</arg>
+<arg>20001</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="NOT RUN" start="2025-07-18T13:48:01.598602" elapsed="0.000026"/>
+</kw>
+<arg>1234567890INVALID</arg>
+<status status="FAIL" start="2025-07-18T13:48:01.367932" elapsed="0.230839">HTTPError: 401 Client Error: Unauthorized for url: https://api.sandbox.ebay.com/sell/fulfillment/v1/order/1234567890INVALID</status>
+</kw>
+<status status="FAIL" start="2025-07-18T13:48:01.366461" elapsed="0.232834">HTTPError: 401 Client Error: Unauthorized for url: https://api.sandbox.ebay.com/sell/fulfillment/v1/order/1234567890INVALID</status>
+</test>
+<test id="s1-t3" name="Test Get Orders - Valid Request" line="13">
+<kw name="Get Orders Should Succeed" owner="ebay_keywords">
+<kw name="GET On Session" owner="RequestsLibrary">
+<msg time="2025-07-18T13:48:01.829464" level="INFO">GET Request : url=https://api.sandbox.ebay.com/sell/fulfillment/v1/order 
+ path_url=/sell/fulfillment/v1/order 
+ headers={'User-Agent': 'python-requests/2.32.3', 'Accept-Encoding': 'gzip, deflate', 'Accept': 'application/json', 'Connection': 'keep-alive', 'Authorization': 'Bearer v^1.1#i^1#f^0#r^0#p^1#I^3#t^H4sIAAAAAAAA/+VYW2wUVRjublu0wYKXhhpQso5AgmRmZ2Z39jKyq9sWQqFXttQCIc2ZmTN0YHZmmHO23QVDaoEqlwSDsfalBhIIqBV8ENHEYPQBFcQIKhrAFwKJYgSDF2zi7cy0lG0lgHQTmzgvk3POf/7zfd/5/3NjOyeUPNa9oPtqqecu785OttPr8XAT2ZIJxXMmFXqnFhewOQaenZ0zOou6Cr+di0BKt8TFEFmmgaAvk9INJLqVMSptG6IJkIZEA6QgErEsJhO1NSLPsKJlm9iUTZ3yVVfFKFmKBNSAEBb4aFQN8RypNa75bDJjlBqNSJAN8mGoSCElGiLtCKVhtYEwMHCM4lleoNkwzUWaOE4M8qLAM4LALqN8zdBGmmkQE4al4i5c0e1r52C9OVSAELQxcULFqxPzk/WJ6qp5dU1z/Tm+4kM6JDHAaTSyVGkq0NcM9DS8+TDItRaTaVmGCFH++OAII52KiWtg7gC+K7Uq80FZCEYBD1SiWn6knG/aKYBvjsOp0RRadU1FaGANZ2+lKFFDWgVlPFSqIy6qq3zOrzENdE3VoB2j5lUkliYaGqi4RKhqBlRoHUjA0uhkRQsdZiVJhRGZpQGMqGEI5KFhBn0NiTxqnErTUDRHMuSrM3EFJJjhaGUCOcoQo3qj3k6o2MGTaxe4pmAguMyZ0sE5TOM2w5lVmCIy+NzirfUf7o2xrUlpDIc9jG5wBYpRwLI0hRrd6EbiUPBkUIxqw9gS/f6Ojg6mI8CY9ko/z7Kcv6W2Jim3wRSgXFsn1x177dYdaM2lIkPSE2kizloES4ZEKgFgrKTiQYHjBG5I95Gw4qNr/1GRw9k/Mh/ylR88CLCKoMgKz0Z5CIR85Ed8KET9Dg4ogSydAvZqiC0dyJCWSZylU9DWFDEgqHwgokJaCUVVOhhVVVoSlBDNqRCyEEqSHI38f9LkdgM9CWUb4jxFep6ivFKAFaGgaS6sa2GT3LzmRKY9UtOgtSR4HaQbs7U19asy7W3NldlAY+x2c+GG5Ct1jSjTRMbPlwBOrudHhAUmwlAZE72kbFqwwdQ1OTu+JjhgKw3AxtmKdJaUk1DXyW9MVBOWVZ2v9TpPJP/VUnFnrPO5S/0nO9QNWSEnbMcXK6c/Ig7IPDLOHsTIZsrv5LoJyAHEqW51UY+Jt0ZOruOKNSE5yFZTBo+cjEuXQe0yY0Nkpm1y2mbqnTNYk7kaGmRPw7ap69BuHlsEONmcSqUxkHQ43tI6DwGugXG24XLk8hgJRKJhfky8ZHc7bR1vS1I+FuKieXd0rPaPvOLHC9yP6/IcZbs8R7weD1vF0twcdvaEwiVFhfdQSMOQQcBQJDPDaEBlkLbSIDdYGzKrYdYCmu19oOCLi88nl55Y9HbP4bVrnmGeOFJQkvPSsHMF++DwW0NJITcx5+GBfeh6SzE3ubyUF9gwF+G4IC/wy9hHr7cWcVOKykBPRlo/sOGj2S/N7P7Ze3F5/9lHjrOlw0YeT3FBUZenoP3h3ZOmXdp78o2yzIE+7dmATx5Yf/fmr4+dnzHVVxL5+My0qczLPeUnFvbO+nTxub6Nm8/v6L/v1d9nNp9siFivLwk3oHWXd5xlTy2sfHxg+qFL7/adrr3/zH7r/I8du7ZcWfPl3u6DlcLAC+hC4q9FP4RKX/vzp9l9/ae3cl1b9dNVmza09X4/fX9KnNJzKVmYCR7bV/t08INfQq2flZn87ilry7/6ddcnJ8Tj6z6cRe+Y81bNwOULG1KNB44WbvL8ceDePd+9k0kPtG4rq/M8xa0/+P6LXf1Xz77X693z3Mxv/KmTNQe3l6891dEbDB/ecg6/eWVjW/Xi7d7Pp6/at/zJNXjF5N8OZZbGtvW+MjinfwP0WSCEAxIAAA==', 'Content-Type': 'application/json'} 
+ body=None 
+ </msg>
+<msg time="2025-07-18T13:48:01.829733" level="INFO">GET Response : url=https://api.sandbox.ebay.com/sell/fulfillment/v1/order 
+ status=401, reason=Unauthorized 
+ headers={'rlogid': 't6pithqauq%60fiiw%28ufmadh%7B%3F%3Ctowiugvpd%60jhs.vgiggi%7F.01d73ece%3Ce*gu4j4-1981dcabfc6-0x2357', 'x-ebay-client-tls-version': 'TLSv1.3', 'x-content-type-options': 'nosniff', 'x-xss-protection': '0', 'cache-control': 'no-cache, no-store, max-age=0, must-revalidate', 'pragma': 'no-cache', 'expires': '0', 'x-frame-options': 'DENY', 'content-type': 'application/json', 'content-length': '254', 'date': 'Fri, 18 Jul 2025 13:48:03 GMT', 'x-envoy-upstream-service-time': '9', 'server': 'ebay-proxy-server', 'strict-transport-security': 'max-age=31536000', 'x-ebay-pop-id': 'UFES2-LVSAZ01-apisandbox'} 
+ body={
+  "errors": [
+    {
+      "errorId": 1001,
+      "domain": "OAuth",
+      "category": "REQUEST",
+      "message": "Invalid access token",
+      "longMessage": "Invalid access token. Check the value of the Authorization HTTP request header."
+    }
+  ]
+} 
+ </msg>
+<msg time="2025-07-18T13:48:01.829867" level="INFO">C:\Users\Utilisateur\AppData\Local\Programs\Python\Python313\Lib\site-packages\urllib3\connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host 'api.sandbox.ebay.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(</msg>
+<msg time="2025-07-18T13:48:01.830676" level="FAIL">HTTPError: 401 Client Error: Unauthorized for url: https://api.sandbox.ebay.com/sell/fulfillment/v1/order</msg>
+<var>${response}</var>
+<arg>ebay</arg>
+<arg>url=/order</arg>
+<doc>Sends a GET request on a previously created HTTP Session.</doc>
+<status status="FAIL" start="2025-07-18T13:48:01.602152" elapsed="0.229740">HTTPError: 401 Client Error: Unauthorized for url: https://api.sandbox.ebay.com/sell/fulfillment/v1/order</status>
+</kw>
+<kw name="Should Be Equal As Integers" owner="BuiltIn">
+<arg>${response.status_code}</arg>
+<arg>200</arg>
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<status status="NOT RUN" start="2025-07-18T13:48:01.832130" elapsed="0.000038"/>
+</kw>
+<kw>
+<var>${orders}=</var>
+<var>${response.json()}</var>
+<status status="NOT RUN" start="2025-07-18T13:48:01.832302" elapsed="0.000028"/>
+</kw>
+<kw name="Should Be True" owner="BuiltIn">
+<arg>len(${orders}) &gt; 0</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="NOT RUN" start="2025-07-18T13:48:01.832458" elapsed="0.000028"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<arg>Number of orders found: ${len(${orders})}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2025-07-18T13:48:01.832606" elapsed="0.000026"/>
+</kw>
+<status status="FAIL" start="2025-07-18T13:48:01.601814" elapsed="0.230948">HTTPError: 401 Client Error: Unauthorized for url: https://api.sandbox.ebay.com/sell/fulfillment/v1/order</status>
+</kw>
+<status status="FAIL" start="2025-07-18T13:48:01.600947" elapsed="0.232287">HTTPError: 401 Client Error: Unauthorized for url: https://api.sandbox.ebay.com/sell/fulfillment/v1/order</status>
+</test>
+<test id="s1-t4" name="Test Issue Refund - Valid" line="16">
+<kw name="Issue Refund Should Succeed" owner="ebay_keywords">
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2025-07-18T13:48:01.838311" level="INFO">${refund_data} = {'amount': '', 'value': '50.00', 'currency': 'USD', 'reason': 'BUYER_REQUESTED', 'comments': 'Customer requested refund for damaged item'}</msg>
+<var>${refund_data}</var>
+<arg>amount=</arg>
+<arg>value=50.00</arg>
+<arg>currency=USD</arg>
+<arg>reason=BUYER_REQUESTED</arg>
+<arg>comments=Customer requested refund for damaged item</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2025-07-18T13:48:01.837432" elapsed="0.000972"/>
+</kw>
+<kw name="POST On Session" owner="RequestsLibrary">
+<msg time="2025-07-18T13:48:02.081688" level="INFO">POST Request : url=https://api.sandbox.ebay.com/sell/fulfillment/v1/order/TEST-ORDER-2023-123456/issue_refund 
+ path_url=/sell/fulfillment/v1/order/TEST-ORDER-2023-123456/issue_refund 
+ headers={'User-Agent': 'python-requests/2.32.3', 'Accept-Encoding': 'gzip, deflate', 'Accept': 'application/json', 'Connection': 'keep-alive', 'Authorization': 'Bearer v^1.1#i^1#f^0#r^0#p^1#I^3#t^H4sIAAAAAAAA/+VYW2wUVRjublu0wYKXhhpQso5AgmRmZ2Z39jKyq9sWQqFXttQCIc2ZmTN0YHZmmHO23QVDaoEqlwSDsfalBhIIqBV8ENHEYPQBFcQIKhrAFwKJYgSDF2zi7cy0lG0lgHQTmzgvk3POf/7zfd/5/3NjOyeUPNa9oPtqqecu785OttPr8XAT2ZIJxXMmFXqnFhewOQaenZ0zOou6Cr+di0BKt8TFEFmmgaAvk9INJLqVMSptG6IJkIZEA6QgErEsJhO1NSLPsKJlm9iUTZ3yVVfFKFmKBNSAEBb4aFQN8RypNa75bDJjlBqNSJAN8mGoSCElGiLtCKVhtYEwMHCM4lleoNkwzUWaOE4M8qLAM4LALqN8zdBGmmkQE4al4i5c0e1r52C9OVSAELQxcULFqxPzk/WJ6qp5dU1z/Tm+4kM6JDHAaTSyVGkq0NcM9DS8+TDItRaTaVmGCFH++OAII52KiWtg7gC+K7Uq80FZCEYBD1SiWn6knG/aKYBvjsOp0RRadU1FaGANZ2+lKFFDWgVlPFSqIy6qq3zOrzENdE3VoB2j5lUkliYaGqi4RKhqBlRoHUjA0uhkRQsdZiVJhRGZpQGMqGEI5KFhBn0NiTxqnErTUDRHMuSrM3EFJJjhaGUCOcoQo3qj3k6o2MGTaxe4pmAguMyZ0sE5TOM2w5lVmCIy+NzirfUf7o2xrUlpDIc9jG5wBYpRwLI0hRrd6EbiUPBkUIxqw9gS/f6Ojg6mI8CY9ko/z7Kcv6W2Jim3wRSgXFsn1x177dYdaM2lIkPSE2kizloES4ZEKgFgrKTiQYHjBG5I95Gw4qNr/1GRw9k/Mh/ylR88CLCKoMgKz0Z5CIR85Ed8KET9Dg4ogSydAvZqiC0dyJCWSZylU9DWFDEgqHwgokJaCUVVOhhVVVoSlBDNqRCyEEqSHI38f9LkdgM9CWUb4jxFep6ivFKAFaGgaS6sa2GT3LzmRKY9UtOgtSR4HaQbs7U19asy7W3NldlAY+x2c+GG5Ct1jSjTRMbPlwBOrudHhAUmwlAZE72kbFqwwdQ1OTu+JjhgKw3AxtmKdJaUk1DXyW9MVBOWVZ2v9TpPJP/VUnFnrPO5S/0nO9QNWSEnbMcXK6c/Ig7IPDLOHsTIZsrv5LoJyAHEqW51UY+Jt0ZOruOKNSE5yFZTBo+cjEuXQe0yY0Nkpm1y2mbqnTNYk7kaGmRPw7ap69BuHlsEONmcSqUxkHQ43tI6DwGugXG24XLk8hgJRKJhfky8ZHc7bR1vS1I+FuKieXd0rPaPvOLHC9yP6/IcZbs8R7weD1vF0twcdvaEwiVFhfdQSMOQQcBQJDPDaEBlkLbSIDdYGzKrYdYCmu19oOCLi88nl55Y9HbP4bVrnmGeOFJQkvPSsHMF++DwW0NJITcx5+GBfeh6SzE3ubyUF9gwF+G4IC/wy9hHr7cWcVOKykBPRlo/sOGj2S/N7P7Ze3F5/9lHjrOlw0YeT3FBUZenoP3h3ZOmXdp78o2yzIE+7dmATx5Yf/fmr4+dnzHVVxL5+My0qczLPeUnFvbO+nTxub6Nm8/v6L/v1d9nNp9siFivLwk3oHWXd5xlTy2sfHxg+qFL7/adrr3/zH7r/I8du7ZcWfPl3u6DlcLAC+hC4q9FP4RKX/vzp9l9/ae3cl1b9dNVmza09X4/fX9KnNJzKVmYCR7bV/t08INfQq2flZn87ilry7/6ddcnJ8Tj6z6cRe+Y81bNwOULG1KNB44WbvL8ceDePd+9k0kPtG4rq/M8xa0/+P6LXf1Xz77X693z3Mxv/KmTNQe3l6891dEbDB/ecg6/eWVjW/Xi7d7Pp6/at/zJNXjF5N8OZZbGtvW+MjinfwP0WSCEAxIAAA==', 'Content-Type': 'application/json', 'Content-Length': '138'} 
+ body=b'{"amount": "", "value": "50.00", "currency": "USD", "reason": "BUYER_REQUESTED", "comments": "Customer requested refund for damaged item"}' 
+ </msg>
+<msg time="2025-07-18T13:48:02.081897" level="INFO">POST Response : url=https://api.sandbox.ebay.com/sell/fulfillment/v1/order/TEST-ORDER-2023-123456/issue_refund 
+ status=401, reason=Unauthorized 
+ headers={'rlogid': 't6shrfgostwhciwdvn%60jhs.vgiggi%7F9%3Fvjwdbmvvrjfkrfslehmq%2Btbkbel%7D%2B2ecd3%60a%3E%3Eg%28ui%3Afm-1981dcac0b7-0x233f', 'x-ebay-client-tls-version': 'TLSv1.3', 'content-type': 'application/json', 'content-length': '254', 'date': 'Fri, 18 Jul 2025 13:48:03 GMT', 'x-envoy-upstream-service-time': '29', 'server': 'ebay-proxy-server', 'strict-transport-security': 'max-age=31536000', 'x-ebay-pop-id': 'UFES2-LVSAZ01-apisandbox'} 
+ body={
+  "errors": [
+    {
+      "errorId": 1001,
+      "domain": "OAuth",
+      "category": "REQUEST",
+      "message": "Invalid access token",
+      "longMessage": "Invalid access token. Check the value of the Authorization HTTP request header."
+    }
+  ]
+} 
+ </msg>
+<msg time="2025-07-18T13:48:02.082052" level="INFO">C:\Users\Utilisateur\AppData\Local\Programs\Python\Python313\Lib\site-packages\urllib3\connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host 'api.sandbox.ebay.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(</msg>
+<msg time="2025-07-18T13:48:02.083386" level="FAIL">HTTPError: 401 Client Error: Unauthorized for url: https://api.sandbox.ebay.com/sell/fulfillment/v1/order/TEST-ORDER-2023-123456/issue_refund</msg>
+<var>${response}</var>
+<arg>ebay</arg>
+<arg>url=/order/${order_id}/issue_refund</arg>
+<arg>json=${refund_data}</arg>
+<doc>Sends a POST request on a previously created HTTP Session.</doc>
+<status status="FAIL" start="2025-07-18T13:48:01.838802" elapsed="0.246487">HTTPError: 401 Client Error: Unauthorized for url: https://api.sandbox.ebay.com/sell/fulfillment/v1/order/TEST-ORDER-2023-123456/issue_refund</status>
+</kw>
+<kw name="Should Be Equal As Integers" owner="BuiltIn">
+<arg>${response.status_code}</arg>
+<arg>200</arg>
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<status status="NOT RUN" start="2025-07-18T13:48:02.086174" elapsed="0.000241"/>
+</kw>
+<kw>
+<var>${refund}=</var>
+<var>${response.json()}</var>
+<status status="NOT RUN" start="2025-07-18T13:48:02.086941" elapsed="0.000212"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<arg>Refund details: ${refund}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2025-07-18T13:48:02.087467" elapsed="0.000059"/>
+</kw>
+<kw name="Should Be True" owner="BuiltIn">
+<arg>${refund.orderId} == ${order_id}</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="NOT RUN" start="2025-07-18T13:48:02.087764" elapsed="0.000074"/>
+</kw>
+<arg>${VALID_ORDER_ID}</arg>
+<status status="FAIL" start="2025-07-18T13:48:01.836213" elapsed="0.251877">HTTPError: 401 Client Error: Unauthorized for url: https://api.sandbox.ebay.com/sell/fulfillment/v1/order/TEST-ORDER-2023-123456/issue_refund</status>
+</kw>
+<status status="FAIL" start="2025-07-18T13:48:01.834848" elapsed="0.253747">HTTPError: 401 Client Error: Unauthorized for url: https://api.sandbox.ebay.com/sell/fulfillment/v1/order/TEST-ORDER-2023-123456/issue_refund</status>
+</test>
+<test id="s1-t5" name="Test Issue Refund - Invalid Request" line="19">
+<kw name="Issue Refund Should Fail" owner="ebay_keywords">
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2025-07-18T13:48:02.092724" level="INFO">${refund_data} = {'amount': '', 'value': '-10.00', 'currency': 'USD', 'reason': 'INVALID_REASON', 'comments': 'Invalid refund request'}</msg>
+<var>${refund_data}</var>
+<arg>amount=</arg>
+<arg>value=-10.00</arg>
+<arg>currency=USD</arg>
+<arg>reason=INVALID_REASON</arg>
+<arg>comments=Invalid refund request</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2025-07-18T13:48:02.092210" elapsed="0.000602"/>
+</kw>
+<kw name="POST On Session" owner="RequestsLibrary">
+<msg time="2025-07-18T13:48:02.325563" level="INFO">POST Request : url=https://api.sandbox.ebay.com/sell/fulfillment/v1/order/1234567890INVALID/issue_refund 
+ path_url=/sell/fulfillment/v1/order/1234567890INVALID/issue_refund 
+ headers={'User-Agent': 'python-requests/2.32.3', 'Accept-Encoding': 'gzip, deflate', 'Accept': 'application/json', 'Connection': 'keep-alive', 'Authorization': 'Bearer v^1.1#i^1#f^0#r^0#p^1#I^3#t^H4sIAAAAAAAA/+VYW2wUVRjublu0wYKXhhpQso5AgmRmZ2Z39jKyq9sWQqFXttQCIc2ZmTN0YHZmmHO23QVDaoEqlwSDsfalBhIIqBV8ENHEYPQBFcQIKhrAFwKJYgSDF2zi7cy0lG0lgHQTmzgvk3POf/7zfd/5/3NjOyeUPNa9oPtqqecu785OttPr8XAT2ZIJxXMmFXqnFhewOQaenZ0zOou6Cr+di0BKt8TFEFmmgaAvk9INJLqVMSptG6IJkIZEA6QgErEsJhO1NSLPsKJlm9iUTZ3yVVfFKFmKBNSAEBb4aFQN8RypNa75bDJjlBqNSJAN8mGoSCElGiLtCKVhtYEwMHCM4lleoNkwzUWaOE4M8qLAM4LALqN8zdBGmmkQE4al4i5c0e1r52C9OVSAELQxcULFqxPzk/WJ6qp5dU1z/Tm+4kM6JDHAaTSyVGkq0NcM9DS8+TDItRaTaVmGCFH++OAII52KiWtg7gC+K7Uq80FZCEYBD1SiWn6knG/aKYBvjsOp0RRadU1FaGANZ2+lKFFDWgVlPFSqIy6qq3zOrzENdE3VoB2j5lUkliYaGqi4RKhqBlRoHUjA0uhkRQsdZiVJhRGZpQGMqGEI5KFhBn0NiTxqnErTUDRHMuSrM3EFJJjhaGUCOcoQo3qj3k6o2MGTaxe4pmAguMyZ0sE5TOM2w5lVmCIy+NzirfUf7o2xrUlpDIc9jG5wBYpRwLI0hRrd6EbiUPBkUIxqw9gS/f6Ojg6mI8CY9ko/z7Kcv6W2Jim3wRSgXFsn1x177dYdaM2lIkPSE2kizloES4ZEKgFgrKTiQYHjBG5I95Gw4qNr/1GRw9k/Mh/ylR88CLCKoMgKz0Z5CIR85Ed8KET9Dg4ogSydAvZqiC0dyJCWSZylU9DWFDEgqHwgokJaCUVVOhhVVVoSlBDNqRCyEEqSHI38f9LkdgM9CWUb4jxFep6ivFKAFaGgaS6sa2GT3LzmRKY9UtOgtSR4HaQbs7U19asy7W3NldlAY+x2c+GG5Ct1jSjTRMbPlwBOrudHhAUmwlAZE72kbFqwwdQ1OTu+JjhgKw3AxtmKdJaUk1DXyW9MVBOWVZ2v9TpPJP/VUnFnrPO5S/0nO9QNWSEnbMcXK6c/Ig7IPDLOHsTIZsrv5LoJyAHEqW51UY+Jt0ZOruOKNSE5yFZTBo+cjEuXQe0yY0Nkpm1y2mbqnTNYk7kaGmRPw7ap69BuHlsEONmcSqUxkHQ43tI6DwGugXG24XLk8hgJRKJhfky8ZHc7bR1vS1I+FuKieXd0rPaPvOLHC9yP6/IcZbs8R7weD1vF0twcdvaEwiVFhfdQSMOQQcBQJDPDaEBlkLbSIDdYGzKrYdYCmu19oOCLi88nl55Y9HbP4bVrnmGeOFJQkvPSsHMF++DwW0NJITcx5+GBfeh6SzE3ubyUF9gwF+G4IC/wy9hHr7cWcVOKykBPRlo/sOGj2S/N7P7Ze3F5/9lHjrOlw0YeT3FBUZenoP3h3ZOmXdp78o2yzIE+7dmATx5Yf/fmr4+dnzHVVxL5+My0qczLPeUnFvbO+nTxub6Nm8/v6L/v1d9nNp9siFivLwk3oHWXd5xlTy2sfHxg+qFL7/adrr3/zH7r/I8du7ZcWfPl3u6DlcLAC+hC4q9FP4RKX/vzp9l9/ae3cl1b9dNVmza09X4/fX9KnNJzKVmYCR7bV/t08INfQq2flZn87ilry7/6ddcnJ8Tj6z6cRe+Y81bNwOULG1KNB44WbvL8ceDePd+9k0kPtG4rq/M8xa0/+P6LXf1Xz77X693z3Mxv/KmTNQe3l6891dEbDB/ecg6/eWVjW/Xi7d7Pp6/at/zJNXjF5N8OZZbGtvW+MjinfwP0WSCEAxIAAA==', 'Content-Type': 'application/json', 'Content-Length': '118'} 
+ body=b'{"amount": "", "value": "-10.00", "currency": "USD", "reason": "INVALID_REASON", "comments": "Invalid refund request"}' 
+ </msg>
+<msg time="2025-07-18T13:48:02.325689" level="INFO">POST Response : url=https://api.sandbox.ebay.com/sell/fulfillment/v1/order/1234567890INVALID/issue_refund 
+ status=401, reason=Unauthorized 
+ headers={'rlogid': 't6shrfgostwhciwdvn%60jhs.vgiggi%7F9%3Fvjwdbmvvrjfkrfslehmq%2Btbkbel%7D%2B2ecd3%60a%3E%3Eg%28het%7F3-1981dcac1b2-0x233e', 'x-ebay-client-tls-version': 'TLSv1.3', 'content-type': 'application/json', 'content-length': '254', 'date': 'Fri, 18 Jul 2025 13:48:03 GMT', 'x-envoy-upstream-service-time': '17', 'server': 'ebay-proxy-server', 'strict-transport-security': 'max-age=31536000', 'x-ebay-pop-id': 'UFES2-LVSAZ01-apisandbox'} 
+ body={
+  "errors": [
+    {
+      "errorId": 1001,
+      "domain": "OAuth",
+      "category": "REQUEST",
+      "message": "Invalid access token",
+      "longMessage": "Invalid access token. Check the value of the Authorization HTTP request header."
+    }
+  ]
+} 
+ </msg>
+<msg time="2025-07-18T13:48:02.325786" level="INFO">C:\Users\Utilisateur\AppData\Local\Programs\Python\Python313\Lib\site-packages\urllib3\connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host 'api.sandbox.ebay.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(</msg>
+<msg time="2025-07-18T13:48:02.326709" level="FAIL">HTTPError: 401 Client Error: Unauthorized for url: https://api.sandbox.ebay.com/sell/fulfillment/v1/order/1234567890INVALID/issue_refund</msg>
+<var>${response}</var>
+<arg>ebay</arg>
+<arg>url=/order/${invalid_order_id}/issue_refund</arg>
+<arg>json=${refund_data}</arg>
+<doc>Sends a POST request on a previously created HTTP Session.</doc>
+<status status="FAIL" start="2025-07-18T13:48:02.093012" elapsed="0.235064">HTTPError: 401 Client Error: Unauthorized for url: https://api.sandbox.ebay.com/sell/fulfillment/v1/order/1234567890INVALID/issue_refund</status>
+</kw>
+<kw name="Should Be Equal As Integers" owner="BuiltIn">
+<arg>${response.status_code}</arg>
+<arg>400</arg>
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<status status="NOT RUN" start="2025-07-18T13:48:02.328291" elapsed="0.000039"/>
+</kw>
+<kw>
+<var>${error}=</var>
+<var>${response.json()}</var>
+<status status="NOT RUN" start="2025-07-18T13:48:02.328478" elapsed="0.000025"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<arg>Error details: ${error}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2025-07-18T13:48:02.328637" elapsed="0.000028"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${error.errorId}</arg>
+<arg>20001</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="NOT RUN" start="2025-07-18T13:48:02.328782" elapsed="0.000049"/>
+</kw>
+<kw name="POST On Session" owner="RequestsLibrary">
+<var>${response}</var>
+<arg>ebay</arg>
+<arg>/order/${invalid_order_id}/issue_refund</arg>
+<arg>json=${refund_data}</arg>
+<doc>Sends a POST request on a previously created HTTP Session.</doc>
+<status status="NOT RUN" start="2025-07-18T13:48:02.329054" elapsed="0.000044"/>
+</kw>
+<kw name="Should Not Be Equal As Integers" owner="BuiltIn">
+<arg>${response.status_code}</arg>
+<arg>200</arg>
+<doc>Fails if objects are equal after converting them to integers.</doc>
+<status status="NOT RUN" start="2025-07-18T13:48:02.329473" elapsed="0.000045"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<arg>Response status: ${response.status_code}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2025-07-18T13:48:02.329714" elapsed="0.000041"/>
+</kw>
+<arg>1234567890INVALID</arg>
+<status status="FAIL" start="2025-07-18T13:48:02.091637" elapsed="0.238324">HTTPError: 401 Client Error: Unauthorized for url: https://api.sandbox.ebay.com/sell/fulfillment/v1/order/1234567890INVALID/issue_refund</status>
+</kw>
+<status status="FAIL" start="2025-07-18T13:48:02.090297" elapsed="0.240140">HTTPError: 401 Client Error: Unauthorized for url: https://api.sandbox.ebay.com/sell/fulfillment/v1/order/1234567890INVALID/issue_refund</status>
+</test>
+<status status="FAIL" start="2025-07-18T13:47:59.250627" elapsed="3.081948"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="5" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Ebay Api Tests" id="s1" pass="0" fail="5" skip="0">Ebay Api Tests</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

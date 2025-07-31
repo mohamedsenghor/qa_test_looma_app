@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.13.5 on win32)" generated="20250721 12:08:07.426" rpa="false" schemaversion="4">
+<suite id="s1" name="TestProducts" source="C:\EXAMEN_QA_TEST\lab1_mongodb\testcases\TestProducts.robot">
+<test id="s1-t1" name="Create Product - Success" line="10">
+<kw name="Connect To Mongodb" library="mongodb_lib">
+<var>${db}</var>
+<arg>${MONGO_URI}</arg>
+<arg>${DB_NAME}</arg>
+<doc>Connect to MongoDB using the provided URI and database name.</doc>
+<msg timestamp="20250721 12:08:12.161" level="INFO">${db} = Database(MongoClient(host=['ac-9yo9xpy-shard-00-00.ifptzd7.mongodb.net:27017', 'ac-9yo9xpy-shard-00-02.ifptzd7.mongodb.net:27017', 'ac-9yo9xpy-shard-00-01.ifptzd7.mongodb.net:27017'], document_class=d...</msg>
+<status status="PASS" starttime="20250721 12:08:07.696" endtime="20250721 12:08:12.161"/>
+</kw>
+<kw name="Convert To Number" library="BuiltIn">
+<var>${price}</var>
+<arg>100</arg>
+<doc>Converts the given item to a floating point number.</doc>
+<msg timestamp="20250721 12:08:12.162" level="INFO">${price} = 100.0</msg>
+<status status="PASS" starttime="20250721 12:08:12.162" endtime="20250721 12:08:12.162"/>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<var>${product}</var>
+<arg>title=Keyboard</arg>
+<arg>price=${price}</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<msg timestamp="20250721 12:08:12.164" level="INFO">${product} = {'title': 'Keyboard', 'price': 100.0}</msg>
+<status status="PASS" starttime="20250721 12:08:12.163" endtime="20250721 12:08:12.164"/>
+</kw>
+<kw name="Create Product" library="mongodb_lib">
+<var>${id}</var>
+<arg>${db}</arg>
+<arg>${product}</arg>
+<doc>Create a new product in the database.</doc>
+<msg timestamp="20250721 12:08:13.144" level="INFO">${id} = 687e2dac612ee111d30ca59e</msg>
+<status status="PASS" starttime="20250721 12:08:12.165" endtime="20250721 12:08:13.144"/>
+</kw>
+<kw name="Should Not Be Empty" library="BuiltIn">
+<arg>${id}</arg>
+<doc>Verifies that the given item is not empty.</doc>
+<msg timestamp="20250721 12:08:13.145" level="INFO">Length is 24</msg>
+<status status="PASS" starttime="20250721 12:08:13.144" endtime="20250721 12:08:13.145"/>
+</kw>
+<status status="PASS" starttime="20250721 12:08:07.696" endtime="20250721 12:08:13.146"/>
+</test>
+<test id="s1-t2" name="Read Product - Success" line="17">
+<kw name="Connect To Mongodb" library="mongodb_lib">
+<var>${db}</var>
+<arg>${MONGO_URI}</arg>
+<arg>${DB_NAME}</arg>
+<doc>Connect to MongoDB using the provided URI and database name.</doc>
+<msg timestamp="20250721 12:08:17.219" level="INFO">${db} = Database(MongoClient(host=['ac-9yo9xpy-shard-00-00.ifptzd7.mongodb.net:27017', 'ac-9yo9xpy-shard-00-02.ifptzd7.mongodb.net:27017', 'ac-9yo9xpy-shard-00-01.ifptzd7.mongodb.net:27017'], document_class=d...</msg>
+<status status="PASS" starttime="20250721 12:08:13.148" endtime="20250721 12:08:17.219"/>
+</kw>
+<kw name="Convert To Number" library="BuiltIn">
+<var>${price}</var>
+<arg>50</arg>
+<doc>Converts the given item to a floating point number.</doc>
+<msg timestamp="20250721 12:08:17.220" level="INFO">${price} = 50.0</msg>
+<status status="PASS" starttime="20250721 12:08:17.219" endtime="20250721 12:08:17.220"/>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<var>${product}</var>
+<arg>title=Mouse</arg>
+<arg>price=${price}</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<msg timestamp="20250721 12:08:17.221" level="INFO">${product} = {'title': 'Mouse', 'price': 50.0}</msg>
+<status status="PASS" starttime="20250721 12:08:17.221" endtime="20250721 12:08:17.221"/>
+</kw>
+<kw name="Create Product" library="mongodb_lib">
+<var>${id}</var>
+<arg>${db}</arg>
+<arg>${product}</arg>
+<doc>Create a new product in the database.</doc>
+<msg timestamp="20250721 12:08:17.916" level="INFO">${id} = 687e2db1612ee111d30ca5a0</msg>
+<status status="PASS" starttime="20250721 12:08:17.222" endtime="20250721 12:08:17.916"/>
+</kw>
+<kw name="Read Product" library="mongodb_lib">
+<var>${result}</var>
+<arg>${db}</arg>
+<arg>${id}</arg>
+<doc>Read a product from the database by its ID.</doc>
+<msg timestamp="20250721 12:08:17.985" level="INFO">${result} = {'_id': ObjectId('687e2db1612ee111d30ca5a0'), 'title': 'Mouse', 'price': 50.0}</msg>
+<status status="PASS" starttime="20250721 12:08:17.917" endtime="20250721 12:08:17.985"/>
+</kw>
+<kw name="Dictionary Should Contain Key" library="Collections">
+<arg>${result}</arg>
+<arg>title</arg>
+<doc>Fails if ``key`` is not found from ``dictionary``.</doc>
+<status status="PASS" starttime="20250721 12:08:17.986" endtime="20250721 12:08:17.986"/>
+</kw>
+<status status="PASS" starttime="20250721 12:08:13.148" endtime="20250721 12:08:17.987"/>
+</test>
+<test id="s1-t3" name="Update Product - Success" line="25">
+<kw name="Connect To Mongodb" library="mongodb_lib">
+<var>${db}</var>
+<arg>${MONGO_URI}</arg>
+<arg>${DB_NAME}</arg>
+<doc>Connect to MongoDB using the provided URI and database name.</doc>
+<msg timestamp="20250721 12:08:22.061" level="INFO">${db} = Database(MongoClient(host=['ac-9yo9xpy-shard-00-00.ifptzd7.mongodb.net:27017', 'ac-9yo9xpy-shard-00-02.ifptzd7.mongodb.net:27017', 'ac-9yo9xpy-shard-00-01.ifptzd7.mongodb.net:27017'], document_class=d...</msg>
+<status status="PASS" starttime="20250721 12:08:17.990" endtime="20250721 12:08:22.061"/>
+</kw>
+<kw name="Convert To Number" library="BuiltIn">
+<var>${price}</var>
+<arg>200</arg>
+<doc>Converts the given item to a floating point number.</doc>
+<msg timestamp="20250721 12:08:22.061" level="INFO">${price} = 200.0</msg>
+<status status="PASS" starttime="20250721 12:08:22.061" endtime="20250721 12:08:22.061"/>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<var>${product}</var>
+<arg>title=Tablet</arg>
+<arg>price=${price}</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<msg timestamp="20250721 12:08:22.063" level="INFO">${product} = {'title': 'Tablet', 'price': 200.0}</msg>
+<status status="PASS" starttime="20250721 12:08:22.062" endtime="20250721 12:08:22.063"/>
+</kw>
+<kw name="Create Product" library="mongodb_lib">
+<var>${id}</var>
+<arg>${db}</arg>
+<arg>${product}</arg>
+<doc>Create a new product in the database.</doc>
+<msg timestamp="20250721 12:08:22.750" level="INFO">${id} = 687e2db6612ee111d30ca5a2</msg>
+<status status="PASS" starttime="20250721 12:08:22.063" endtime="20250721 12:08:22.750"/>
+</kw>
+<kw name="Convert To Number" library="BuiltIn">
+<var>${new_price}</var>
+<arg>260</arg>
+<doc>Converts the given item to a floating point number.</doc>
+<msg timestamp="20250721 12:08:22.751" level="INFO">${new_price} = 260.0</msg>
+<status status="PASS" starttime="20250721 12:08:22.751" endtime="20250721 12:08:22.751"/>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<var>${update_fields}</var>
+<arg>price=${new_price}</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<msg timestamp="20250721 12:08:22.752" level="INFO">${update_fields} = {'price': 260.0}</msg>
+<status status="PASS" starttime="20250721 12:08:22.752" endtime="20250721 12:08:22.752"/>
+</kw>
+<kw name="Update Product" library="mongodb_lib">
+<var>${count}</var>
+<arg>${db}</arg>
+<arg>${id}</arg>
+<arg>${update_fields}</arg>
+<doc>Update a product in the database.</doc>
+<msg timestamp="20250721 12:08:22.824" level="INFO">${count} = 1</msg>
+<status status="PASS" starttime="20250721 12:08:22.753" endtime="20250721 12:08:22.824"/>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<arg>${count} &gt; 0</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" starttime="20250721 12:08:22.824" endtime="20250721 12:08:22.825"/>
+</kw>
+<status status="PASS" starttime="20250721 12:08:17.989" endtime="20250721 12:08:22.825"/>
+</test>
+<test id="s1-t4" name="Delete Product - Success" line="36">
+<kw name="Connect To Mongodb" library="mongodb_lib">
+<var>${db}</var>
+<arg>${MONGO_URI}</arg>
+<arg>${DB_NAME}</arg>
+<doc>Connect to MongoDB using the provided URI and database name.</doc>
+<msg timestamp="20250721 12:08:27.177" level="INFO">${db} = Database(MongoClient(host=['ac-9yo9xpy-shard-00-00.ifptzd7.mongodb.net:27017', 'ac-9yo9xpy-shard-00-02.ifptzd7.mongodb.net:27017', 'ac-9yo9xpy-shard-00-01.ifptzd7.mongodb.net:27017'], document_class=d...</msg>
+<status status="PASS" starttime="20250721 12:08:22.828" endtime="20250721 12:08:27.177"/>
+</kw>
+<kw name="Convert To Number" library="BuiltIn">
+<var>${price}</var>
+<arg>400</arg>
+<doc>Converts the given item to a floating point number.</doc>
+<msg timestamp="20250721 12:08:27.178" level="INFO">${price} = 400.0</msg>
+<status status="PASS" starttime="20250721 12:08:27.177" endtime="20250721 12:08:27.178"/>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<var>${product}</var>
+<arg>title=Phone</arg>
+<arg>price=${price}</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<msg timestamp="20250721 12:08:27.179" level="INFO">${product} = {'title': 'Phone', 'price': 400.0}</msg>
+<status status="PASS" starttime="20250721 12:08:27.178" endtime="20250721 12:08:27.179"/>
+</kw>
+<kw name="Create Product" library="mongodb_lib">
+<var>${id}</var>
+<arg>${db}</arg>
+<arg>${product}</arg>
+<doc>Create a new product in the database.</doc>
+<msg timestamp="20250721 12:08:27.879" level="INFO">${id} = 687e2dbb612ee111d30ca5a4</msg>
+<status status="PASS" starttime="20250721 12:08:27.179" endtime="20250721 12:08:27.879"/>
+</kw>
+<kw name="Delete Product" library="mongodb_lib">
+<var>${count}</var>
+<arg>${db}</arg>
+<arg>${id}</arg>
+<doc>Delete a product from the database.</doc>
+<msg timestamp="20250721 12:08:27.951" level="INFO">${count} = 1</msg>
+<status status="PASS" starttime="20250721 12:08:27.880" endtime="20250721 12:08:27.951"/>
+</kw>
+<kw name="Should Be Equal As Integers" library="BuiltIn">
+<arg>${count}</arg>
+<arg>1</arg>
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<msg timestamp="20250721 12:08:27.952" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<status status="PASS" starttime="20250721 12:08:27.951" endtime="20250721 12:08:27.952"/>
+</kw>
+<status status="PASS" starttime="20250721 12:08:22.827" endtime="20250721 12:08:27.953"/>
+</test>
+<status status="PASS" starttime="20250721 12:08:07.429" endtime="20250721 12:08:27.955"/>
+</suite>
+<statistics>
+<total>
+<stat pass="4" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="4" fail="0" skip="0" id="s1" name="TestProducts">TestProducts</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

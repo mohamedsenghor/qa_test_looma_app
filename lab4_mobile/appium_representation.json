@@ -1,0 +1,10 @@
+{
+  "platformName": "Android",
+  "appium:platformVersion": "16",
+  "appium:deviceName": "Medium Phone API 36",
+  "appium:automationName": "Flutter",
+  "appium:app": "/home/mohamed/Documents/ISI_Courses/QA_Test/EXAMEN_QA_TEST/lab4_mobile/app-looma.apk",
+  "appium:noReset": false,
+  "appium:appPackage": "sn.sonatel.dsi.moussa.wade.moussawade",
+  "appium:appActivity": ".MainActivity"
+}
