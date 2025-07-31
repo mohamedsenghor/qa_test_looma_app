@@ -354,7 +354,7 @@ robot --loglevel TRACE --outputdir debug_results tests/
 robot --loglevel DEBUG --test "Should Login With Valid Credentials" tests/login_tests.robot
 ```
 
-## 🎯 Best Practices Implemented
+## Best Practices Implemented
 
 ### Test Design
 
