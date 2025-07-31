@@ -1,8 +1,0 @@
-[appium]
-platformName=Android
-deviceName=emulator-5554
-appPackage=sn.sonatel.dsi.moussa.wade.moussawade
-appActivity=sn.sonatel.dsi.moussa.wade.moussawade.MainActivity
-automationName=UiAutomator2
-noReset=true
-newCommandTimeout=90000
