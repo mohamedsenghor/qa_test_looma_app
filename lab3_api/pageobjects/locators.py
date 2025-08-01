@@ -2,5 +2,5 @@
 ENDPOINTS = {
     "GET_ORDER": "/order/",
     "GET_ORDERS": "/order",
-    "ISSUE_REFUND": "/order/{orderId}/issue_refund"  # Ce endpoint doit être personnalisé si dispo
+    "ISSUE_REFUND": "/order/{orderId}/issue_refund"
 }
