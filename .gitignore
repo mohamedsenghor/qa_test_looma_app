@@ -1,9 +1,0 @@
-# Ignore all 'results' folders
-results/
-
-# Ignore all '__pycache__' folders
-__pycache__/
-
-output.xml
-report.html
-log.html
