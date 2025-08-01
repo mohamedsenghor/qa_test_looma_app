@@ -3,4 +3,7 @@
 __pycache__/
 .env
 results/
-
+log.html
+output.xml
+report.html
+*.png
