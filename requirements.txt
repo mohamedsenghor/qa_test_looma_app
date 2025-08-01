@@ -1,8 +1,0 @@
-robotframework==6.1.1
-robotframework-seleniumlibrary==6.1.1
-robotframework-mongodblibrary==0.3.4
-robotframework-requests==0.9.0
-robotframework-appiumlibrary==2.0.0
-Appium-Python-Client==2.11.1
-pymongo==4.6.1
-requests==2.31.0
