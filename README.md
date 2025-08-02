@@ -9,6 +9,11 @@
 
 This repository contains a comprehensive collection of automated testing laboratories covering the full spectrum of Quality Assurance practices. The project demonstrates professional testing methodologies across different application types and technologies, implementing industry best practices with Robot Framework. Each laboratory showcases expertise in a specific testing domain while maintaining consistent architectural patterns and documentation standards.
 
+## Livrables attendus
+
+- [Document PowerPoint de restitution des travaux](https://app.slidespeak.co/presentation/cmdtepfyf000abyrtmor1apmj/share)
+- [Dépôt GitHub du projet](https://github.com/mohamedsenghor/qa_test_looma_app.git)
+
 ## Repository Structure
 
 ```text
