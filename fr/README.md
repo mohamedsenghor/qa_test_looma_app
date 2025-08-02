@@ -9,6 +9,11 @@
 
 Ce dépôt contient une collection complète de laboratoires de tests automatisés couvrant l’ensemble des pratiques d’Assurance Qualité. Le projet démontre des méthodologies de test professionnelles sur différents types d’applications et technologies, en appliquant les meilleures pratiques du secteur avec Robot Framework. Chaque laboratoire met en avant une expertise dans un domaine de test spécifique tout en maintenant des schémas architecturaux et des standards de documentation cohérents.
 
+## Livrables attendus
+
+- [Document PowerPoint](https://app.slidespeak.co/presentation/cmdtepfyf000abyrtmor1apmj/share)
+- [Cahier des tests](https://docs.google.com/spreadsheets/d/1o9x8D0V55L5qH38dhjzkDsfCp7lreeKO7ZZAMCezyrE/edit?usp=sharing)
+
 ## Structure du Dépôt
 
 ```text
