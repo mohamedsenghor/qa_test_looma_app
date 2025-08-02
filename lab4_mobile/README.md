@@ -34,6 +34,7 @@ lab4_mobile/
 - **Java JDK 8+** for Android tools
 - **Android SDK** with platform tools
 - **Android Emulator** or physical device
+- [**APK Looma**](https://drive.google.com/drive/folders/1SDDdiFu1mIvJXaJagv0QOs4eNCFfyaqU?usp=sharing) to test
 
 ### Python Dependencies
 

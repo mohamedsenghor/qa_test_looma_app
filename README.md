@@ -186,6 +186,8 @@ qa_test_looma_app/
 
 **Documentation**: Available in [English](lab4_mobile/README.md) and [French](lab4_mobile/fr/README.md)
 
+**Resources**: Here is the [Android APK Looma](https://drive.google.com/drive/folders/1SDDdiFu1mIvJXaJagv0QOs4eNCFfyaqU?usp=sharing)
+
 ## Prerequisites
 
 ### System Requirements
