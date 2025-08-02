@@ -12,7 +12,7 @@ This repository contains a comprehensive collection of automated testing laborat
 ## Livrables attendus
 
 - [Document PowerPoint de restitution des travaux](https://app.slidespeak.co/presentation/cmdtepfyf000abyrtmor1apmj/share)
-- [Dépôt GitHub du projet](https://github.com/mohamedsenghor/qa_test_looma_app.git)
+- [Cahier des tests](https://docs.google.com/spreadsheets/d/1o9x8D0V55L5qH38dhjzkDsfCp7lreeKO7ZZAMCezyrE/edit?usp=sharing)
 
 ## Repository Structure
 
